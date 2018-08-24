@@ -5,15 +5,17 @@ class Armstrong
     public static void main(String[] args) 
 	{
 		Scanner sc= new Scanner(System.in);
-        double  num, number, temp, sum = 0,n=0;
+        int num, number, temp,n=0; 
+		double sum = 0;
 		System.out.print("Enter the number :");
-		num=sc.nextDouble();
+		num=sc.nextInt();
         number = num;
-		 while (number != 0)
+		 while (number != 0)//to find digits of number 
 		{
         number =number/ 10;
         ++n;
 		}
+		//System.out.println(n);
 		number = num;
         while (number != 0)
         {

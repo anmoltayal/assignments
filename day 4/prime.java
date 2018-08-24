@@ -1,25 +1,28 @@
 import java.util.Scanner;
-class Primenum
+class Prime
 {
  public static void main(String args[])
  {
-  int number,count=0;
+  int n;
   Scanner sc= new Scanner(System.in);
-  System.out.println("Enter number:");
-  number=sc.nextInt();
-  for(int i=2;i<number;i++)
+  System.out.print("Enter number:");
+  n=sc.nextInt();
+  System.out.println("Prime numbers upto "+n+" :");
+  for(int i=2;i<=n;i++)
 	{ 
-		for(int j=2;j<number;j++) 
+		int count=0;
+		for(int j=2;j<i;j++) 
 		{
-			if(j%i==0)
+			if(i%j==0)
 			{
-				count=count+1;
-			}
-			if (count ==0)
-			{
-				System.out.println(j);
+				count=1;
+				break;
 			}
 		}
+		if (count ==0)
+			{
+				System.out.println(i);
+			}
 	}	
  }
 }
